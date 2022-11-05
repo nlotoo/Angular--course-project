@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
+.header-container .logo-container .logo-text{
+    font-family: 'Kolker Brush', cursive;
+}
+
+.logo-container img {
+    margin-right: 10px;
+}
 
 .header-container {
     display: flex;
@@ -16,12 +24,12 @@
 }
 
 .logo-image {
-    width:20%
+    width: 20%
 }
 
-.logo-text {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
+
+
+
 
 .item-list-top .list-item {
     list-style: none;
@@ -29,6 +37,7 @@
 
 .header-container nav .item-list-top {
     display: flex;
+    align-items: center;
     gap: 30px;
     font-size: 20px;
 }
@@ -46,7 +55,8 @@
 .header-container p {
     margin: 0;
     font-size: 34px;
-    font-family: math;
+    font-family: cursive;
+    text-shadow: 2px 2px 2px rgba(255,255,255,0.41);
 }
 
 
@@ -55,8 +65,14 @@
     padding: 20px;
 }
 
+.nav-icon {
+    font-size: 34px;
+    overflow: inherit;
+    color: rgb(228, 224, 224);
+}
 
-/* .store-hoover ul:hover {
-    color: green;
-    display: block;
-} */
+.nav-icon:hover {
+    transition: 2s;
+    color: #FF8066;
+
+}
