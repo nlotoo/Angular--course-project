@@ -8,11 +8,13 @@ import { HomePageComponent } from './header-elements/top-head-navigation/home-pa
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
+import { StorePageComponent } from './header-elements/main/store-page/store-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    TopHeadNavigationComponent
+    TopHeadNavigationComponent,
+    StorePageComponent
 
 
   ],
