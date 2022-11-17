@@ -1,11 +1,33 @@
-.input-group mb-3 {
+.heading {
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+
+
+.add-item-container .container-image {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.form-container {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.10);
     margin: auto;
+    width: 20%;
+    border: 2px solid black;
 }
 
-.descriptionItem {
-    max-height: 75px;
+.add-form-btn {
+    margin-top: 20px;
+    margin-left: 25%;
 }
 
-.buttonAddForm {
-    margin-top: 50px;
+.alert {
+    margin-top: 15px;
 }

@@ -6,7 +6,7 @@ import { MainServiceService } from '../services/main-service.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
  
   constructor(private ServiceComponent : MainServiceService ) {
@@ -14,9 +14,7 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
 
-  }
 
   
   isAuth() {

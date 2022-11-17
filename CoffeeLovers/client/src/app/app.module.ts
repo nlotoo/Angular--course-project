@@ -33,7 +33,6 @@ import { CommentsPageComponent } from './comments-page/comments-page.component';
 import { CommentsActiveBubbleComponent } from './comments-active-bubble/comments-active-bubble.component';
 import { EditCommentPageComponent } from './edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
-import { SppinerComponent } from './shared/sppiner/sppiner.component';
 
 
 
@@ -51,7 +50,6 @@ import { SppinerComponent } from './shared/sppiner/sppiner.component';
     CommentsPageComponent,
     CommentsActiveBubbleComponent,
     EditCommentPageComponent,
-    SppinerComponent,
 
 
   ],
