@@ -1,0 +1,47 @@
+<!-- <mat-toolbar>
+
+    <span class="myApp"> <a routerLink="/home">My app</a></span>
+    <div class="menuBar">
+        <ul fxLayout="row">
+
+            <li><a *ngIf="!isAuth()" routerLink="/login">Login</a></li>
+            <li><a *ngIf="!isAuth()" routerLink="/register">Register</a></li>
+            <li><a routerLink="/catalog">Catalog</a></li>
+            <li><a *ngIf="isAuth()" routerLink="/add-item">Add new Item</a> </li>
+            <li><a *ngIf="isAuth()" (click)="logout()" routerLink="/home">Logout</a></li>
+
+
+        </ul>
+    </div>
+</mat-toolbar> -->
+<app-sppiner></app-sppiner>
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img routerLink="/home" class="logo-image" alt="coffe-logo" src="../../../assets/img/logo.png">
+            <p class="logo-text">Coffee lovers</p>
+        </div>
+
+        <nav>
+            <ul class="item-list-top">
+                <li class="list-item"><a routerLink="/home">Home</a></li>
+                <li class="list-item"><a href="#">About</a></li>
+                <li class="list-item"><a *ngIf="isAuth()" routerLink="/add-item">Add new Item</a> </li>
+                <li class="list-item"><a routerLink="/catalog">
+                        <mat-icon class="nav-icon"> store_mall_directory</mat-icon>
+                    </a>
+                </li>
+                <li class="list-item"><a href="#">
+                        <mat-icon>favorite</mat-icon>
+                    </a></li>
+                <li class="list-item"><a *ngIf="!isAuth()" routerLink="/login">
+                        <mat-icon class="nav-icon">account_circle</mat-icon>
+                    </a></li>
+                <li class="list-item lastOne"><a *ngIf="isAuth()" (click)="logout()" routerLink="/home">Logout</a></li>
+
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<router-outlet></router-outlet>
