@@ -1,7 +1,10 @@
-<mat-card>
-    <mat-card-title fxLayoutAlign='center center'>Login</mat-card-title>
+<div class="login-container">
+    
+    <img class="container-image" src="../../assets/img/back-ground.jpg">
+
+    <mat-card-title class="heading" fxLayoutAlign='center center'>Login</mat-card-title>
     <mat-card-content fxLayoutAlign='center center'>
-        <form class='registerForm' [formGroup]="loginForm" (submit)="loginUser()">
+        <form class='form-container' [formGroup]="loginForm" (submit)="loginUser()">
             <div class='username'>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
@@ -18,11 +21,9 @@
                     <!-- <mat-hint>Hint</mat-hint> -->
                 </mat-form-field>
             </div>
-            <div class='alert alert-warning' *ngIf="warningMessage">{{warningMessage}}</div>
-            <button mat-stroked-button color="accent">Login</button>
+            <div  class='alert alert-warning' *ngIf="warningMessage">{{warningMessage}}</div>
+            <button class="login-form-btn" mat-stroked-button color="accent">Login</button>
         </form>
-
-
     </mat-card-content>
 
-</mat-card>
+</div>

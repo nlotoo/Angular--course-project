@@ -1,0 +1,30 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.10);
+    margin: auto;
+    width: 20%;
+    border: 2px solid black;
+}
+
+.container-image{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+
+.heading {
+    padding-top: 10rem;
+    margin-bottom: 30px;
+}
