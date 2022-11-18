@@ -19,12 +19,25 @@
     z-index: -1;
 }
 
-
-
-
-
-
 .heading {
     padding-top: 10rem;
     margin-bottom: 30px;
+}
+.login-form-btn{
+    margin-top: 20px;
+}
+
+.help-a-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.help-a-tags a{
+    text-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
+    color: white;
+    margin: 2px;
+}
+.help-a-tags a:hover{
+    font-size: medium;
 }

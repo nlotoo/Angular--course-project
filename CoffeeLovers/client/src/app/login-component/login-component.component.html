@@ -1,5 +1,5 @@
 <div class="login-container">
-    
+
     <img class="container-image" src="../../assets/img/back-ground.jpg">
 
     <mat-card-title class="heading" fxLayoutAlign='center center'>Login</mat-card-title>
@@ -21,8 +21,12 @@
                     <!-- <mat-hint>Hint</mat-hint> -->
                 </mat-form-field>
             </div>
-            <div  class='alert alert-warning' *ngIf="warningMessage">{{warningMessage}}</div>
-            <button class="login-form-btn" mat-stroked-button color="accent">Login</button>
+            <div class="help-a-tags">
+                <a routerLink="/login">Forget passsword</a>
+                <a routerLink="/register">You don`t have account (click here)</a>
+                <div class='alert alert-warning' *ngIf="warningMessage">{{warningMessage}}</div>
+            </div>
+            <button class="login-form-btn" mat-flat-button color="basic">Login</button>
         </form>
     </mat-card-content>
 

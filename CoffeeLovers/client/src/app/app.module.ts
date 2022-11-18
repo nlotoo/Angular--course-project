@@ -54,10 +54,10 @@ import { IsAuthGuard } from './guards/is-auth.guard';
 
   ],
   imports: [
-    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
 
