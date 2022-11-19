@@ -40,4 +40,5 @@
 }
 .help-a-tags a:hover{
     font-size: medium;
+    transition: all 2s;
 }
