@@ -1,24 +1,34 @@
-<div fxLayoutAlign="center center">
-    <button class="buttonLoadComments" (click)="laodComments()" mat-button><mat-icon>restore</mat-icon> COOMMENTS </button>
-</div>
+<div class="page-container">
+    <div class="comments-btn">
+        <button (click)="laodComments()" mat-button>
+            <mat-icon>restore</mat-icon> COOMMENTS
+        </button>
+    </div>
 
-<div fxLayoutAlign="center center" *ngFor="let coment of coments">
-    <mat-card class="example-card">
+    <div class="comments-list" *ngFor="let coment of coments">
+        <div class="example-card card-container">
+            <div class="author-container" > 
+                <h4><span class="author">Author:</span>{{coment.email}}</h4>
+            </div>
 
-        <mat-card-subtitle><b>Author: </b> {{coment.email}}</mat-card-subtitle>
-        <mat-card-content>
-            <p>{{coment.content}}</p>
-        </mat-card-content>
-        <mat-card-actions>
 
-            <button mat-button (click)="like(coment._id)" disabled="{{coment.likeButton}}">LIKE</button>
-            <mat-hint>{{coment.likes.likes.length}}</mat-hint>
-            <button mat-button (click)="dislike(coment._id)" disabled="{{!coment.likeButton}}">DISSLIKE</button>
-            <button mat-button routerLink="/edit-comment-page/{{coment._id}}" *ngIf="coment?.author==flag">EDIT</button>
-        </mat-card-actions>
-        <mat-hint>{{coment.time| date:'short'}}</mat-hint>
-    </mat-card>
-</div>
-<div fxLayoutAlign="center center" *ngIf="coments?.length == 0">
-    <h1>No comments yet</h1>
+
+            <div class="card-content">
+                <p>{{coment.content}}</p>
+            </div>
+
+
+            <mat-card-actions class="active-btn">
+                <button mat-button (click)="like(coment._id)" disabled="{{coment.likeButton}}">LIKE</button>
+                <mat-hint>{{coment.likes.likes.length}}</mat-hint>
+                <button mat-button (click)="dislike(coment._id)" disabled="{{!coment.likeButton}}">DISSLIKE</button>
+                <button mat-button routerLink="/edit-comment-page/{{coment._id}}"
+                    *ngIf="coment?.author==flag">EDIT</button>
+            </mat-card-actions>
+            <mat-hint>{{coment.time| date:'short'}}</mat-hint>
+        </div>
+    </div>
+    <div fxLayoutAlign="center center" *ngIf="coments?.length == 0">
+        <h1>No comments yet</h1>
+    </div>
 </div>

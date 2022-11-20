@@ -1,11 +1,52 @@
-.example-card {
-    max-width: 400px;
-    border-color: cadetblue, solid, 2px;
-    margin-top: 20px;
+
+.page-container{
+    margin-top: 30px;
 }
 
-.buttonLoadComments {
-    margin-bottom: 20px;
+.comments-btn {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.411);
     margin-top: 20px;
     background-color: antiquewhite;
+    text-align: center;
+    width: 14%;
+    margin: auto;
+}
+.comments-list {
+    text-align: center;
+    margin: auto;
+    width: 25%;
+}
+.author-container{
+
+    text-align: left;
+}
+
+.author {
+    font-weight: bold;
+    margin-right: 5px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.card-content {
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(245, 222, 179, 0.205);
+    border-radius: 5px;
+}
+.card-content p {
+    padding: 0;
+    margin: 0;
+}
+
+.card-container {
+    margin-top: 20px ;
+    color: whitesmoke;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.40);
+    border: 2px solid black;
 }
