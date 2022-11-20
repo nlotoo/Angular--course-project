@@ -1,14 +1,15 @@
 <div class="page-container">
     <div class="card-container">
         <h1>Add Comment</h1>
-        <span class="author">Author</span>
+        <div class="author-container">
+            <span class="author">Author</span>
+            <span>{{uername}}</span>
+        </div>
 
-        <span>
-            {{uername}}</span>
         <div class="card-content">
             <textarea matInput #inputVal class="textarea" rows="4" cols="70"></textarea>
         </div>
-        <mat-hint>Your comment lenth shoud be 160 characters </mat-hint>
+        <span class="hint">Your comment lenth shoud be 160 characters </span>
 
         <div class="action-btn">
             <button (click)="postComment(inputVal.value)" mat-button>POST</button>
