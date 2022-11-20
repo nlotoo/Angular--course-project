@@ -2,19 +2,27 @@
     width: 350px;
     resize: none;
 }
-
+.card-container {
+    text-align: left;
+    margin: 0;
+}
 .author {
     font-size: larger;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    padding-bottom: 20px;
+}
+.page-container {
+    padding-top: 40px;
+    margin: auto;
+    text-align: center;
+    width: 30%;
 }
 
-.contentDiv {
-    padding-top: 20px;
+.card-container {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.10);
+    border: 2px solid black;
 }
 
-.example-card {
-    border: 1px solid;
-    border-color: grey;
-}
