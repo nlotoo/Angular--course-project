@@ -16,16 +16,15 @@
                             You shoud be type name </mat-hint>
                     </mat-form-field>
                 </div>
-                <div class='colorItem'>
+                <div class='weight-item'>
                     <mat-form-field appearance="outline">
-                        <mat-label>Color Item</mat-label>
-                        <input matInput placeholder="Color Item" formControlName="color">
+                        <mat-label>Weight Item</mat-label>
+                        <input matInput placeholder="weight Item" formControlName="weight">
                         <mat-icon matSuffix>opacity</mat-icon>
                         <mat-hint
-                            *ngIf="addItemForm.controls.color.touched &&  addItemForm.controls.color.errors?.required">
+                            *ngIf="addItemForm.controls.weight.touched &&  addItemForm.controls.weight.errors?.required">
                             You
-                            shoud be type your color </mat-hint>
-
+                            shoud be type cooffe weight</mat-hint>
                     </mat-form-field>
                 </div>
                 <div class='imgURL'>
@@ -42,7 +41,7 @@
                 <div class='descriptionItem'>
                     <mat-form-field appearance="outline">
                         <mat-label>Description</mat-label>
-                        <textarea matInput placeholder="Here type your description "
+                        <textarea class="textarea" rows="5" matInput placeholder="Here type your description "
                             formControlName='description'> </textarea>
                         <!-- <mat-hint>You can write only 160 symbols</mat-hint> -->
                         <mat-icon matSuffix>A</mat-icon>

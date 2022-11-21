@@ -82,14 +82,14 @@ function inscription(user) {
     return { reduceUserInfo }
 }
 async function addNewItem(data) {
-    let { itemName, color, imageUrl, description, author } = data; // proverka
+    let { itemName, weight, imageUrl, description, author } = data; // proverka
 
-
+    console.log(weight)
     if (itemName.length < 1) {
         throw 'All fields are required'
     }
 
-    if (color.length < 1) {
+    if (weight.length < 1) {
         throw 'All fields are required'
     }
 

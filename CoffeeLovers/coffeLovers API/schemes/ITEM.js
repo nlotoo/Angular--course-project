@@ -7,8 +7,8 @@ const itemSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    color: {
-        type: String,
+    weight: {
+        type: Number,
         required: true
     },
     imageUrl: {

@@ -37,7 +37,7 @@ export class EditPageComponent implements OnInit {
   ReactiveFormFunc(data: any) {
     return this.updateItemForm = this.fb.group({
       itemName: [`${data?.itemName}`, Validators.required],
-      color: [`${data?.color}`, Validators.required],
+      weight: [`${data?.weight}`, Validators.required],
       imageUrl: [`${data?.imageUrl}`, Validators.required],
       description: [`${data?.description}`, Validators.required],
     })

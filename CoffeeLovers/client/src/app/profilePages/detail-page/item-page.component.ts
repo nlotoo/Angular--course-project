@@ -22,6 +22,7 @@ export class ItemPageComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.ServiceComponent.getOneItem(data['id']).subscribe((itemById) => {
         this.item = itemById
+        console.log(this.item)
         let locastorageID = localStorage.getItem('User ID')
         this.authorBoolean = this.item.author == locastorageID
       })

@@ -2,6 +2,9 @@
     padding-top: 100px;
     margin-bottom: 30px;
 }
+.textarea {
+    resize: none;
+}
 
 .add-item-container{
     background-image: url(../../../assets/img/back-ground.jpg);

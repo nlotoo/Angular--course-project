@@ -23,7 +23,7 @@ export class AddItemComponent implements OnInit {
   ngOnInit(): void {
     this.addItemForm = this.fb.group({
       itemName: ['', [Validators.required]],
-      color: ['', [Validators.required]],
+      weight: ['', [Validators.required]],
       imageUrl: ['', [Validators.required]],
       description: ['', [Validators.required]],
     })

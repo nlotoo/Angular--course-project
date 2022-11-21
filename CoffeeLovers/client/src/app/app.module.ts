@@ -30,7 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
 import { CommentsPageComponent } from './profilePages/comments-page/comments-page.component';
-import { CommentsActiveBubbleComponent } from './profilePages/comments-active-bubble/comments-active-bubble.component';
+import { CommentsActiveBubbleComponent } from './comments-active-bubble/comments-active-bubble.component';
 import { EditCommentPageComponent } from './profilePages/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
 

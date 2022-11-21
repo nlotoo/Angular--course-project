@@ -63,11 +63,11 @@ export class MainServiceService {
   newAddItem(data: AddItemFace) {
 
 
-    let { itemName, color, imageUrl, description, } = data
+    let { itemName, weight, imageUrl, description, } = data
     let creator = localStorage.getItem('User ID')
     let myObj = {
       itemName: itemName,
-      color: color,
+      weight: weight,
       imageUrl: imageUrl,
       description: description,
       author: creator

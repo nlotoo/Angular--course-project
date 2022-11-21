@@ -1,7 +1,7 @@
 export interface AddItemFace {
     _id: string,
     itemName: string,
-    color: string,
+    weight: string,
     imageUrl: string,
     description: string,
     author: string
