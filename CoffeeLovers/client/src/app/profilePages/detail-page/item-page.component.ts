@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MainServiceService } from '../services/main-service.service';
+import { MainServiceService } from '../../services/main-service.service';
 
 @Component({
   selector: 'app-item-page',

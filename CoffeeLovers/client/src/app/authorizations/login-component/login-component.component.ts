@@ -4,8 +4,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { map } from 'rxjs/operators'
 
-import { registerFace } from '../interfaces/registerFace';
-import { MainServiceService } from '../services/main-service.service';
+import { registerFace } from '../../interfaces/registerFace';
+import { MainServiceService } from '../../services/main-service.service';
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { HttpClient } from '@angular/common/http';

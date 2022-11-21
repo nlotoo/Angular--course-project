@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { registerFace } from '../interfaces/registerFace';
-import { MainServiceService } from '../services/main-service.service';
+import { registerFace } from '../../interfaces/registerFace';
+import { MainServiceService } from '../../services/main-service.service';
 
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs';
-import { loginFace } from '../interfaces/loginFace';
+import { loginFace } from '../../interfaces/loginFace';
 
 const host = environment.apiURL
 

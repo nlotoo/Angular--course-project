@@ -9,10 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './app.material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegisterComponentComponent } from './register-component/register-component.component';
-import { LoginComponentComponent } from './login-component/login-component.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { RegisterComponentComponent } from './authorizations/register-component/register-component.component';
+import { LoginComponentComponent } from './authorizations/login-component/login-component.component';
+import { HomePageComponent } from './core/home-page/home-page.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -23,15 +23,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { environment } from '../environments/environment';
 // import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { ItemPageComponent } from './item-page/item-page.component';
+import { CatalogPageComponent } from './core/catalog-page/catalog-page.component';
+import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AddItemComponent } from './add-item/add-item.component';
-import { EditPageComponent } from './edit-page/edit-page.component';
-import { CommentsPageComponent } from './comments-page/comments-page.component';
-import { CommentsActiveBubbleComponent } from './comments-active-bubble/comments-active-bubble.component';
-import { EditCommentPageComponent } from './edit-comment-page/edit-comment-page.component';
+import { AddItemComponent } from './profilePages/add-item/add-item.component';
+import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
+import { CommentsPageComponent } from './profilePages/comments-page/comments-page.component';
+import { CommentsActiveBubbleComponent } from './profilePages/comments-active-bubble/comments-active-bubble.component';
+import { EditCommentPageComponent } from './profilePages/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
 
 

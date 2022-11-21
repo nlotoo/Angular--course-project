@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs';
-import { MainServiceService } from '../services/main-service.service';
+import { MainServiceService } from '../../services/main-service.service';
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Output, EventEmitter } from '@angular/core';
 

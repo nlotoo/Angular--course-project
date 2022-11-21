@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MainServiceService } from '../services/main-service.service';
-import { AddItemFace } from '../interfaces/addItemFace'
+import { MainServiceService } from '../../services/main-service.service';
+import { AddItemFace } from '../../interfaces/addItemFace'
 import { Router } from '@angular/router';
 
 @Component({

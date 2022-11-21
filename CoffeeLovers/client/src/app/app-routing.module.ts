@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LoginComponentComponent } from './login-component/login-component.component';
-import { RegisterComponentComponent } from './register-component/register-component.component';
-import { HomePageComponent } from './home-page/home-page.component'
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { ItemPageComponent } from './item-page/item-page.component';
-import { AddItemComponent } from './add-item/add-item.component';
-import { EditPageComponent } from './edit-page/edit-page.component';
-import { EditCommentPageComponent } from './edit-comment-page/edit-comment-page.component';
-import { CommentsPageComponent } from './comments-page/comments-page.component';
+import { LoginComponentComponent } from './authorizations/login-component/login-component.component';
+import { RegisterComponentComponent } from './authorizations/register-component/register-component.component';
+import { HomePageComponent } from './core/home-page/home-page.component'
+import { CatalogPageComponent } from './core/catalog-page/catalog-page.component';
+import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
+import { AddItemComponent } from './profilePages/add-item/add-item.component';
+import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
+import { EditCommentPageComponent } from './profilePages/edit-comment-page/edit-comment-page.component';
+import { CommentsPageComponent } from './profilePages/comments-page/comments-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
 
 const routes: Routes = [

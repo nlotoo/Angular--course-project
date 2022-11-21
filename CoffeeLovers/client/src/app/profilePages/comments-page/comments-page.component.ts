@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import { MainServiceService } from '../services/main-service.service';
+import { MainServiceService } from '../../services/main-service.service';
 
 @Component({
   selector: 'app-comments-page',

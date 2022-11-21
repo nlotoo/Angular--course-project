@@ -3,6 +3,13 @@
     margin-bottom: 30px;
 }
 
+.add-item-container{
+    background-image: url(../../../assets/img/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
+}
+
 
 
 .form-container {

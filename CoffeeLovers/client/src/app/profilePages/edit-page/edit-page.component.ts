@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MainServiceService } from '../services/main-service.service';
+import { MainServiceService } from '../../services/main-service.service';
 
 @Component({
   selector: 'app-edit-page',

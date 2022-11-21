@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { DB_PORT } = require("./config.js");
 
-mongoose.connect(`mongodb://localhost:${DB_PORT}/WashUp`,
+mongoose.connect(`mongodb://localhost:${DB_PORT}/Coffelovers`,
 
 );
 
