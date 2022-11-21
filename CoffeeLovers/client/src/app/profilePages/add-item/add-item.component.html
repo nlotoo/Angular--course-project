@@ -26,6 +26,22 @@
                             You
                             shoud be type cooffe weight</mat-hint>
                     </mat-form-field>
+
+                    
+                </div>
+
+                <div class='price-item'>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product price</mat-label>
+                        <input matInput placeholder="product pirce" formControlName="price">
+                        <mat-icon matSuffix>opacity</mat-icon>
+                        <mat-hint
+                            *ngIf="addItemForm.controls.price.touched &&  addItemForm.controls.price.errors?.required">
+                            You
+                            shoud be type cooffe price</mat-hint>
+                    </mat-form-field>
+
+                    
                 </div>
                 <div class='imgURL'>
                     <mat-form-field appearance="outline">

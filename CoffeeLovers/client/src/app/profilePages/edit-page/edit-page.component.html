@@ -19,6 +19,17 @@
 
                 </mat-form-field>
             </div>
+
+
+            
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Product price</mat-label>
+                    <input matInput placeholder="product price" formControlName="price">
+                    <mat-icon matSuffix>opacity</mat-icon>
+                    <mat-hint *ngIf="updateItemForm.controls.price.touched &&  updateItemForm.controls.price.errors?.required">You shoud be type price </mat-hint>
+                </mat-form-field>
+            </div>
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Image Url</mat-label>

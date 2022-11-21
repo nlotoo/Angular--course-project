@@ -63,17 +63,19 @@ export class MainServiceService {
   newAddItem(data: AddItemFace) {
 
 
-    let { itemName, weight, imageUrl, description, } = data
+    let { itemName, weight, imageUrl, description, price, } = data
     let creator = localStorage.getItem('User ID')
     let myObj = {
       itemName: itemName,
       weight: weight,
+      price: price,
       imageUrl: imageUrl,
       description: description,
       author: creator
+
     }
 
-    return this.HttpClient.post<AddItemFace>(`${this.apiURL}/add-item`, myObj,{ headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) } )
+    return this.HttpClient.post<AddItemFace>(`${this.apiURL}/add-item`, myObj, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) })
 
 
   }
@@ -85,17 +87,17 @@ export class MainServiceService {
 
   }
   isLoggedOn() {
-      return localStorage.getItem('Session Token')
+    return localStorage.getItem('Session Token')
   }
   deleteOne(id: string) {
-    return this.HttpClient.get(`${this.apiURL}/delete/${id}`,{ headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
+    return this.HttpClient.get(`${this.apiURL}/delete/${id}`, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
       this.route.navigate(['/catalog'])
       return data
     })
   }
   updateOneItem(itemId: any) {
 
-    return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId,{ headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
+    return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
       console.log(data)
     })
 
@@ -123,7 +125,7 @@ export class MainServiceService {
   }
 
   deleteComment(commentId: any) {
-    return this.HttpClient.delete(`${this.apiURL}/edit-comment-page/${commentId}`, commentId  ).subscribe(
+    return this.HttpClient.delete(`${this.apiURL}/edit-comment-page/${commentId}`, commentId).subscribe(
       {
         next: () => {
           this._location.back()

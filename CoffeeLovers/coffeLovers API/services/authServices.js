@@ -64,7 +64,7 @@ async function loginUser(data) {
 
     let inscriptionData = inscription(user, email)
     return inscriptionData
-        // return { token, userId: user._id, email: user.email };
+    // return { token, userId: user._id, email: user.email };
 }
 
 function inscription(user) {
@@ -82,15 +82,16 @@ function inscription(user) {
     return { reduceUserInfo }
 }
 async function addNewItem(data) {
-    let { itemName, weight, imageUrl, description, author } = data; // proverka
+    let { itemName, weight, imageUrl, description, author, price } = data; // proverka
 
-    console.log(weight)
+    // console.log(data);
+
     if (itemName.length < 1) {
         throw 'All fields are required'
     }
 
-    if (weight.length < 1) {
-        throw 'All fields are required'
+    if (!Number(weight)) {
+        throw 'Your weight format is wrong.'
     }
 
     if (imageUrl.length < 1) {

@@ -5,6 +5,12 @@
     padding-bottom: 100px;
 }
 
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+
 .mat-card {
     width: 220px;
     position: relative;

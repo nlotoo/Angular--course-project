@@ -38,6 +38,7 @@ export class EditPageComponent implements OnInit {
     return this.updateItemForm = this.fb.group({
       itemName: [`${data?.itemName}`, Validators.required],
       weight: [`${data?.weight}`, Validators.required],
+      price: [`${data?.price}`, Validators.required],
       imageUrl: [`${data?.imageUrl}`, Validators.required],
       description: [`${data?.description}`, Validators.required],
     })
