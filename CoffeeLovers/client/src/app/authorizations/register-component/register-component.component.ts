@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-// import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { registerFace } from '../../interfaces/registerFace';
+
 import { MainServiceService } from '../../services/main-service.service';
+import { AuthService } from '../auth.service';
 
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { tap } from 'rxjs';
-import { loginFace } from '../../interfaces/loginFace';
-
-const host = environment.apiURL
 
 @Component({
   selector: 'app-register-component',
@@ -28,20 +22,10 @@ export class RegisterComponentComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    // private afs: AngularFirestore,
-    private ServiceComponent: MainServiceService,
+    private ServiceComponent: AuthService,
     private route: Router,
-    private httpClient: HttpClient,
+    private MainService: MainServiceService
   ) {
-
-    //  this.dataUsers = afs.collection<registerFace>('users')
-    //   .valueChanges()
-    //   .subscribe((data) => {
-    //     console.log(data)
-    //   })
-
-    // user.add({ username: 'item', password: 10 });
-    // console.log(user)
 
 
   }
@@ -72,17 +56,12 @@ export class RegisterComponentComponent implements OnInit {
         this.route.navigate(['/'])
       },
       error: (err: any) => {
-        
+
         this.errorMessage = err.error.message
-        this.ServiceComponent.clearSession()
+        this.MainService.clearSession()
         this.route.navigate(['/register'])
       }
     })
-
-
-
-    // this.route.navigate(['/home'])
-
   }
 
 

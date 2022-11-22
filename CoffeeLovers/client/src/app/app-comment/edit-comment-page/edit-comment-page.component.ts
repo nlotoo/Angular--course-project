@@ -1,7 +1,7 @@
 import { AfterContentInit, Component, DoCheck, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MainServiceService } from '../../services/main-service.service';
+import { CommentService } from '../comment.service';
 
 @Component({
   selector: 'app-edit-comment-page',
@@ -10,7 +10,11 @@ import { MainServiceService } from '../../services/main-service.service';
 })
 export class EditCommentPageComponent implements OnInit {
 
-  constructor(private ServiceComponent: MainServiceService, private fb: FormBuilder, private route: Router) { }
+  constructor(
+    private ServiceComponent: CommentService,
+     private fb: FormBuilder,
+      private route: Router
+      ) { }
 
   username: any = localStorage.getItem('email')
   data: any

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MainServiceService } from '../services/main-service.service';
+import { CommentService } from '../comment.service';
+
 
 @Component({
   selector: 'app-comments-active-bubble',
@@ -9,7 +10,10 @@ import { MainServiceService } from '../services/main-service.service';
 })
 export class CommentsActiveBubbleComponent implements OnInit {
 
-  constructor(private ServiceComponent: MainServiceService, private route: Router) { }
+  constructor(
+    private ServiceComponent: CommentService, 
+    private route: Router
+    ) { }
 
   ngOnInit(): void {
   }

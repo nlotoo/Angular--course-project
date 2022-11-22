@@ -1,0 +1,85 @@
+  // deleteOne(id: string) {
+  //   return this.HttpClient.get(`${this.apiURL}/delete/${id}`, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
+  //     this.route.navigate(['/catalog'])
+  //     return data
+  //   })
+  // }
+
+    // getOneItem(id: string) {
+  //   return this.HttpClient.get(`${this.apiURL}/item/${id}`)
+
+  // }
+
+    // newAddItem(data: AddItemFace) {
+
+
+  //   let { itemName, weight, imageUrl, description, price, } = data
+  //   let creator = localStorage.getItem('User ID')
+  //   let myObj = {
+  //     itemName: itemName,
+  //     weight: weight,
+  //     price: price,
+  //     imageUrl: imageUrl,
+  //     description: description,
+  //     author: creator
+
+  //   }
+
+  //   return this.HttpClient.post<AddItemFace>(`${this.apiURL}/add-item`, myObj, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) })
+
+
+  // }
+
+    // updateOneItem(itemId: any) {
+
+  //   return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) }).subscribe((data) => {
+  //     console.log(data)
+  //   })
+
+
+  // }
+
+
+   // createComment(data: any) {
+  //   return this.HttpClient.post<CommentFace>(`${this.apiURL}/post/comment`, data).subscribe((data) => { return data })
+  // }
+  // loadComment(itemId: any) {
+  //   return this.HttpClient.get<any>(`${this.apiURL}/load/comment/${itemId}`)
+  // }
+  // loadCommentEditPage(commentId: any) {
+  //   return this.HttpClient.get(`${this.apiURL}/edit-comment-page/${commentId}`)
+  // }
+  // editComment(objData: any) {
+  //   return this.HttpClient.post(`${this.apiURL}/edit-comment-page/${objData.id}`, objData)
+  //     .subscribe({
+  //       next: () => {
+  //         this._location.back()
+  //       },
+  //       error: (err: any) => {
+  //         // не е настроен еррора
+  //       }
+  //     })
+  // }
+
+  // deleteComment(commentId: any) {
+  //   return this.HttpClient.delete(`${this.apiURL}/edit-comment-page/${commentId}`, commentId).subscribe(
+  //     {
+  //       next: () => {
+  //         this._location.back()
+  //       },
+  //       error: (err: any) => {
+  //         console.log(err)
+  //         // не са  настроени еррорите
+  //       }
+  //     }
+  //   )
+  // }
+
+  // likeComment(data: any) {
+  //   return this.HttpClient.post(`${this.apiURL}/liked/${data.commentID}`, data)
+  // }
+
+  // dislikeComment(data: any) {
+  //   return this.HttpClient.post(`${this.apiURL}/dislike/${data.commentID}`, data)
+
+  // }

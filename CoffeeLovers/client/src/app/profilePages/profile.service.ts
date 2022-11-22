@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AddItemFace } from '../interfaces/addItemFace';
 import { MainServiceService } from '../services/main-service.service';
 import { environment } from 'src/environments/environment.prod';
-
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class ProfileService {
 
   constructor(
     private HttpClient: HttpClient,
-    private HttpHeaders: HttpHeaders,
-    private MainSerice: MainServiceService
+    private route:Router,
+    private Mainservice: MainServiceService,
   ) { }
 
   apiURL = environment.apiURL
@@ -32,8 +32,28 @@ export class ProfileService {
 
     }
 
-    return this.HttpClient.post<AddItemFace>(`${this.apiURL}/add-item`, myObj, { headers: new HttpHeaders({ 'token': `${this.MainSerice.isLoggedOn()}` }) })
+    return this.HttpClient.post<AddItemFace>(`${this.apiURL}/add-item`, myObj, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) })
 
 
   }
+  getOneItem(id: string) {
+    return this.HttpClient.get(`${this.apiURL}/item/${id}`)
+
+  }
+  deleteOne(id: string) {
+    return this.HttpClient.get(`${this.apiURL}/delete/${id}`, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) }).subscribe((data) => {
+      this.route.navigate(['/catalog'])
+      return data
+    })
+  }
+
+  updateOneItem(itemId: any) {
+
+    return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) }).subscribe((data) => {
+      console.log(data)
+    })
+
+
+  }
+
 }

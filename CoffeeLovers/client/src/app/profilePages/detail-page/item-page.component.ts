@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MainServiceService } from '../../services/main-service.service';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-item-page',
@@ -14,7 +13,10 @@ export class ItemPageComponent implements OnInit {
   authorBoolean: boolean = false
 
 
-  constructor(private route: ActivatedRoute, private ServiceComponent: MainServiceService) {
+  constructor(
+    private route: ActivatedRoute, 
+    private ServiceComponent: ProfileService
+    ) {
 
   }
 
@@ -22,7 +24,7 @@ export class ItemPageComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.ServiceComponent.getOneItem(data['id']).subscribe((itemById) => {
         this.item = itemById
-        // console.log(this.item.price)
+       
         let locastorageID = localStorage.getItem('User ID')
         this.authorBoolean = this.item.author == locastorageID
       })
@@ -30,12 +32,7 @@ export class ItemPageComponent implements OnInit {
     })
 
   }
-
-
-
-
-
-
+  
   deleteItem() {
     let id = this.item._id
     return this.ServiceComponent.deleteOne(id)

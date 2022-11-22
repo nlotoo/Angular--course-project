@@ -8,8 +8,8 @@ import { CatalogPageComponent } from './core/catalog-page/catalog-page.component
 import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
-import { EditCommentPageComponent } from './profilePages/edit-comment-page/edit-comment-page.component';
-import { CommentsPageComponent } from './profilePages/comments-page/comments-page.component';
+import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
+import { CommentsPageComponent } from './app-comment/comments-page/comments-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
 
 const routes: Routes = [

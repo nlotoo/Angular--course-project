@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import { MainServiceService } from '../../services/main-service.service';
+import { CommentService } from '../comment.service';
 
 @Component({
   selector: 'app-comments-page',
@@ -9,7 +9,10 @@ import { MainServiceService } from '../../services/main-service.service';
 })
 export class CommentsPageComponent implements OnInit {
 
-  constructor(private ServiceComponent: MainServiceService, private route: Router) { }
+  constructor(
+    private ServiceComponent: CommentService,
+     private route: Router
+     ) { }
 
   coments: any
 

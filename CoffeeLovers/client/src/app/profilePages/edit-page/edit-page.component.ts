@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MainServiceService } from '../../services/main-service.service';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-edit-page',
@@ -15,7 +15,12 @@ export class EditPageComponent implements OnInit {
   updateItemForm: any
 
 
-  constructor(private ServiceComponet: MainServiceService, private route: ActivatedRoute, private fb: FormBuilder, private router: Router) {
+  constructor(
+    private ServiceComponet: ProfileService, 
+    private route: ActivatedRoute,
+     private fb: FormBuilder, 
+     private router: Router
+     ) {
 
     this.route.params.subscribe((itemId) => {
       return this.ServiceComponet.getOneItem(itemId['id']).subscribe((data) => {

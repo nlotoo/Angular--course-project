@@ -18,9 +18,9 @@ export class AddItemComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder, 
-    private ServiceComponent: MainServiceService, 
+    // private ServiceComponent: MainServiceService, 
     private route: Router,
-    // private ProfileService:ProfileService,  i try to add service in profilePages
+    private ProfileService:ProfileService,
     ) {
 
 
@@ -39,7 +39,7 @@ export class AddItemComponent implements OnInit {
 
     let answer: AddItemFace = this.addItemForm.value
 
-    this.ServiceComponent.newAddItem(answer).subscribe({
+    this.ProfileService.newAddItem(answer).subscribe({
       next: () => {
         this.route.navigate(['/catalog'])
       },
