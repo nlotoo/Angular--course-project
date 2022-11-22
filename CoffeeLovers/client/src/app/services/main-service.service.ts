@@ -16,12 +16,7 @@ export class MainServiceService {
   ) { }
 
 
-  setToken(
-    key: string,
-    value: string,
-  ): void {
-    localStorage.setItem(`${key}`, `${value}`)
-  }
+
   clearSession() {
     localStorage.clear()
   }
