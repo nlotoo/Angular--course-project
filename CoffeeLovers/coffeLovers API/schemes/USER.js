@@ -12,8 +12,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         requred: true
     },
-    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
-
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
+    likedItems: [{ type: Schema.Types.ObjectId, ref: 'Item' }],
 
 })
 

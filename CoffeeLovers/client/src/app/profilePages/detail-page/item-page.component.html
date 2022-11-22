@@ -19,6 +19,7 @@
                     disabled="true">{{item?.description}}</textarea>
             </div>
             <div class="action-btn">
+                <button mat-button (click)="likeItem()">LIKE</button>  <!-- да довърша like btn-->
                 <button mat-button *ngIf="authorBoolean" (click)="deleteItem()">DELETE</button>
                 <button routerLink="/edit-page/{{item?._id}}" mat-button *ngIf="authorBoolean">EDIT</button>
 

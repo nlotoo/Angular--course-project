@@ -137,7 +137,6 @@ router.delete('/edit-comment-page/:id', async(req, res) => {
         res.status(401).json({ message: err })
     }
 })
-
 router.post('/liked/:id', async(req, res) => {
     try {
         let data = await authService.liked(req.body)
@@ -147,10 +146,19 @@ router.post('/liked/:id', async(req, res) => {
     }
 
 })
-
 router.post('/dislike/:id', async(req, res) => {
     try {
         let data = await authService.dislike(req.body)
+        res.status(200).json(data)
+    } catch (err) {
+        res.status(401).json({ message: err })
+    }
+
+})
+
+router.post('/liked-item/:id',async(req,res)=> {
+    try {
+        let data = await authService.likedItem(req.body)
         res.status(200).json(data)
     } catch (err) {
         res.status(401).json({ message: err })

@@ -24,6 +24,7 @@ export class ItemPageComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.ServiceComponent.getOneItem(data['id']).subscribe((itemById) => {
         this.item = itemById
+
        
         let locastorageID = localStorage.getItem('User ID')
         this.authorBoolean = this.item.author == locastorageID
@@ -31,6 +32,12 @@ export class ItemPageComponent implements OnInit {
 
     })
 
+  }
+
+  likeItem(){
+    this.route.params.subscribe((data)=> {
+      console.log(data['id'])
+    })
   }
   
   deleteItem() {

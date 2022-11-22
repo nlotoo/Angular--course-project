@@ -48,6 +48,7 @@ async function loginUser(data) {
     let { email, password } = data;
     let user = await User.findOne({ email });
 
+    console.log(user)
 
 
     if (!user) {
@@ -203,6 +204,7 @@ async function deleteComment(commentID) {
 }
 async function liked(objData) {
 
+    console.log(objData)
 
     let data = await Comment.findById({ _id: objData.commentID })
     data.likes.likes.find((userID) => {
@@ -238,6 +240,12 @@ async function dislike(objData) {
 }
 
 
+async function likedItem(objData){
+    console.log(objData)
+}
+
+
+
 
 
 module.exports = {
@@ -257,4 +265,5 @@ module.exports = {
     deleteComment,
     liked,
     dislike,
+    likedItem,
 };
