@@ -15,7 +15,7 @@ export class MainServiceService {
     private HttpClient: HttpClient,
   ) { }
 
-
+  
 
   clearSession() {
     localStorage.clear()

@@ -166,4 +166,14 @@ router.post('/liked-item/:id',async(req,res)=> {
 
 })
 
+router.post('/disliked-item/:id', async(req, res) => {
+    try {
+        
+        let data = await authService.dislikeItem(req.body)
+        res.status(200).json(data)
+    } catch (err) {
+        res.status(401).json({ message: err })
+    }
+})
+
 module.exports = router

@@ -48,7 +48,7 @@ async function loginUser(data) {
     let { email, password } = data;
     let user = await User.findOne({ email });
 
-    console.log(user)
+    // console.log(user)
 
 
     if (!user) {
@@ -204,7 +204,7 @@ async function deleteComment(commentID) {
 }
 async function liked(objData) {
 
-    console.log(objData)
+    // console.log(objData)
 
     let data = await Comment.findById({ _id: objData.commentID })
     data.likes.likes.find((userID) => {
@@ -239,10 +239,40 @@ async function dislike(objData) {
     return result
 }
 
+async function dislikeItem(objData) {
+    let { itemID, logedUserID } = objData;
 
-async function likedItem(objData){
-    console.log(objData)
+    let data = await User.findById({ _id: logedUserID });
+
+    console.log(data.likedItems.find((a) => {
+        
+        if(a == itemID){
+            return a
+        }
+    }))
+
 }
+
+
+async function likedItem(objData) {
+    let { itemID, logedUserID } = objData;
+    let data = await User.findById({ _id: logedUserID });
+    data.likedItems.find((likedItemsID) => {
+        console.log(likedItemsID)
+        console.log(logedUserID)
+        if (likedItemsID == itemID) {
+            throw 'You can`t like two times one product'
+        }
+    })
+
+    data.likedItems.push(itemID)
+
+    let result = await Promise.all([
+        User.updateOne({ _id: logedUserID }, data)
+    ])
+    return result
+}
+
 
 
 
@@ -266,4 +296,5 @@ module.exports = {
     liked,
     dislike,
     likedItem,
+    dislikeItem,
 };

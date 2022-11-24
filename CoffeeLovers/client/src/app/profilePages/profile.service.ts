@@ -12,7 +12,7 @@ export class ProfileService {
 
   constructor(
     private HttpClient: HttpClient,
-    private route:Router,
+    private route: Router,
     private Mainservice: MainServiceService,
   ) { }
 
@@ -50,9 +50,25 @@ export class ProfileService {
   updateOneItem(itemId: any) {
 
     return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) }).subscribe((data) => {
-      console.log(data)
+      try {
+        console.log('Sucssefull request')
+      }
+      catch (err) {
+        console.log(`Server error: ${err}`)
+      }
     })
+  }
 
+
+  likeButtonPress(data: object | any) {
+
+    return this.HttpClient.post<any>(`${environment.apiURL}/liked-item/${data.itemID}`, data)
+
+  }
+
+  disLikeButtonPress(data: object | any) {
+
+    return this.HttpClient.post<any>(`${environment.apiURL}/disliked-item/${data.itemID}`, data)
 
   }
 
