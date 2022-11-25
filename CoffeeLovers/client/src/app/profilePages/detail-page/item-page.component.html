@@ -15,14 +15,15 @@
                 <img width="100" height="200px" class="card-img" src="{{item?.imageUrl}}" alt="{{item?.itemName}}">
             </a>
             <div class="card-content">
-                <textarea class="textarea1" name="" id="" cols="20" rows="4"
-                    disabled="true">{{item?.description}}</textarea>
+                <textarea class="textarea1" cols="20" rows="4" disabled="true">{{item?.description}}</textarea>
             </div>
             <div class="action-btn">
-                <button mat-button *ngIf="isLoged" (click)="likeItem()">LIKE</button>  
-                <button mat-button *ngIf="isLoged" (click)="disLikeItem()">DISLIKE</button>  
                 <button mat-button *ngIf="authorBoolean" (click)="deleteItem()">DELETE</button>
                 <button routerLink="/edit-page/{{item?._id}}" mat-button *ngIf="authorBoolean">EDIT</button>
+                <hr class="btn-hr">
+                <button mat-button disabled="{{isLiked}}" *ngIf="isLoged" (click)="likeItem()">LIKE</button>
+                <button mat-button disabled="{{!isLiked}}" *ngIf="isLoged" (click)="disLikeItem()">DISLIKE</button>
+   
 
             </div>
         </div>

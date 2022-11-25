@@ -24,6 +24,9 @@ const itemSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    likedAuthor: {
+        type: Array,
+    },
     author: {
         type: Schema.Types.ObjectId,
         ref: "User"

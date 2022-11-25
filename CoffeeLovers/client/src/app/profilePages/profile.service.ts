@@ -67,7 +67,7 @@ export class ProfileService {
   }
 
   disLikeButtonPress(data: object | any) {
-
+    
     return this.HttpClient.post<any>(`${environment.apiURL}/disliked-item/${data.itemID}`, data)
 
   }

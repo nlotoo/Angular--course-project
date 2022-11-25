@@ -14,6 +14,8 @@ export class ItemPageComponent implements OnInit {
 
   item: any
   authorBoolean: boolean = false
+  isLiked: any;
+  isDislike: boolean = false
 
   isLoged: string | null = localStorage.getItem('Session Token')
 
@@ -32,7 +34,7 @@ export class ItemPageComponent implements OnInit {
     this.route.params.subscribe((data) => {
       this.ServiceComponent.getOneItem(data['id']).subscribe((itemById) => {
         this.item = itemById
-
+        this.isLiked = this.item.likedAuthor.includes(this.locastorageID)
         this.authorBoolean = this.item.author == this.locastorageID
       })
 
@@ -51,6 +53,7 @@ export class ItemPageComponent implements OnInit {
     this.ServiceComponent.likeButtonPress(data).subscribe(
       {
         next: () => {
+
           console.log('Sucssefull request')
           window.location.reload();
         },
@@ -73,7 +76,7 @@ export class ItemPageComponent implements OnInit {
       {
         next: () => {
           console.log('Sucssefull request')
-          // window.location.reload();
+          window.location.reload();
         },
         error: (err) => {
           console.log(`Server error: ${err}`)

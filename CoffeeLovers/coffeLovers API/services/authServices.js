@@ -83,7 +83,7 @@ function inscription(user) {
     return { reduceUserInfo }
 }
 async function addNewItem(data) {
-    let { itemName, weight, imageUrl, description, author, price } = data; // proverka
+    let { itemName, weight, imageUrl, description, author, price, likedAuthor } = data; // proverka
 
     // console.log(data);
 
@@ -222,34 +222,46 @@ async function liked(objData) {
 }
 async function dislike(objData) {
 
-    let data = await Comment.findById({ _id: objData.commentID })
+    let data = await Comment.findOne({ _id: objData.commentID })
+
+    data.likes.likes = data.likes.likes.filter((a) => {
+        return a != objData.userID
+    });
+
+
+    await data.updateOne({ _id: objData.commentID });
+    data.save()
 
     arrayLikes = data.likes.likes
 
-    for (let i = 0; i < arrayLikes.length; i++) {
-        if (arrayLikes[i] == objData.userID) {
-            arrayLikes.splice(i, 1)
-            break;
-        }
-    }
-    let result = await Promise.all([
-        Comment.updateOne({ _id: objData.commentID }, data)
-    ])
-
-    return result
+    return data
 }
 
 async function dislikeItem(objData) {
     let { itemID, logedUserID } = objData;
 
-    let data = await User.findById({ _id: logedUserID });
+    let data = await User.findOne({ _id: logedUserID });
+    let itemData = await Item.findOne({ _id: itemID });
 
-    console.log(data.likedItems.find((a) => {
-        
-        if(a == itemID){
-            return a
-        }
-    }))
+    //in item
+    itemData.likedAuthor = itemData.likedAuthor.filter((a) => {
+        return a != logedUserID
+    })
+
+    await Item.updateOne({ _id: itemID }, itemData);
+    itemData.save();
+
+    //in User
+    data.likedItems = data.likedItems.filter((a) => {
+        return a != itemID
+    })
+
+    await User.updateOne({ _id: logedUserID }, data)
+    data.save();
+
+
+
+    return data;
 
 }
 
@@ -257,9 +269,9 @@ async function dislikeItem(objData) {
 async function likedItem(objData) {
     let { itemID, logedUserID } = objData;
     let data = await User.findById({ _id: logedUserID });
+
+    //  in User.
     data.likedItems.find((likedItemsID) => {
-        console.log(likedItemsID)
-        console.log(logedUserID)
         if (likedItemsID == itemID) {
             throw 'You can`t like two times one product'
         }
@@ -270,6 +282,24 @@ async function likedItem(objData) {
     let result = await Promise.all([
         User.updateOne({ _id: logedUserID }, data)
     ])
+
+
+    // in Item
+    let itemData = await Item.findOne({ _id: itemID });
+
+    itemData.likedAuthor.find((a) => {
+        if (a == logedUserID) {
+            throw 'This author is liked this product'
+        }
+    })
+    itemData.likedAuthor.push(logedUserID);
+
+    await Item.updateOne({ _id: itemID }, itemData);
+    itemData.save();
+
+
+
+
     return result
 }
 

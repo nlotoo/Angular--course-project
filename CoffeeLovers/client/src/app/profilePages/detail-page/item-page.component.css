@@ -4,7 +4,7 @@
     background-size: cover;
 }
 
-.header-content{
+.header-content {
     display: flex;
     justify-content: space-between;
 }
@@ -25,6 +25,7 @@
 
 .card-container {
     width: 220px;
+    height: 486px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -56,11 +57,15 @@
     /* border: 1px solid salmon; */
 }
 
+.btn-hr {
+    margin: 0;
+    padding: 0;
+}
 
 .action-btn {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 30px;
 }
 
 
