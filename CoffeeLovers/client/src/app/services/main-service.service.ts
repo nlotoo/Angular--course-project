@@ -9,19 +9,27 @@ import { AddItemFace } from '../interfaces/addItemFace'
 
 export class MainServiceService {
   apiURL = environment.apiURL
-
+  userId = localStorage.getItem('User ID')
 
   constructor(
     private HttpClient: HttpClient,
   ) { }
 
-  
+  dataObject: any = {
+    userId: this.userId
+  }
+
 
   clearSession() {
     localStorage.clear()
   }
   getAllItems() {
     return this.HttpClient.get<AddItemFace>(`${this.apiURL}/catalog`, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) })
+  }
+
+  getFavorite() {
+    return this.HttpClient.post<AddItemFace>(`${this.apiURL}/favorite-catalog`, this.dataObject, { headers: new HttpHeaders({ 'token': `${this.isLoggedOn()}` }) })
+
   }
   isLoggedOn() {
     return localStorage.getItem('Session Token')

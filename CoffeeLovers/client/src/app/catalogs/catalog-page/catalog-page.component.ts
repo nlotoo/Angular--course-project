@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 
@@ -11,6 +11,7 @@ import { MainServiceService } from '../../services/main-service.service';
 export class CatalogPageComponent implements OnInit {
   items: any
 
+
   constructor(private ServiceComponent: MainServiceService, private route: Router) {
     this.ServiceComponent.getAllItems().subscribe((ee) => {
       this.items = ee
@@ -18,7 +19,7 @@ export class CatalogPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+  
 
   }
 

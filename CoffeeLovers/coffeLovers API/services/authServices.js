@@ -296,13 +296,18 @@ async function likedItem(objData) {
 
     await Item.updateOne({ _id: itemID }, itemData);
     itemData.save();
-
-
-
-
     return result
 }
 
+
+async function getFavorite(objData) {
+
+    let { userId } = objData;
+    result = await User.findOne({ _id: userId }).populate('likedItems')
+
+  
+    return result.likedItems
+}
 
 
 
@@ -327,4 +332,6 @@ module.exports = {
     dislike,
     likedItem,
     dislikeItem,
+    getFavorite,
+
 };

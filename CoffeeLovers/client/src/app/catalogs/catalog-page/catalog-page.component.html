@@ -1,0 +1,32 @@
+<div class="page-container">
+
+
+    <h1 ngClass="heading">Catalog</h1>
+
+    <div class="catalog-list">
+        <div class="mat-card" *ngFor="let item of items">
+            <!-- <pre> {{src | json}}</pre> -->
+            <div class="card-header">
+                <h1>{{item.itemName}}</h1>
+                <div class="header-content">
+                    <span>{{item?.weight}}g.</span>
+                    <span>{{item?.price}} $</span>
+                </div>
+            </div>
+            <a routerLink="/item/{{item._id}}">
+                <img width="100" height="200px" class="card-img" mat-card-image src="{{item.imageUrl}}"
+                    alt="{{item.name}}">
+            </a>
+            <div class="card-content">
+                <textarea class="textarea1" name="" id="" cols="20" rows="4"
+                    disabled="true">{{item.description}}</textarea>
+            </div>
+            <div class="action-btn">
+                <button mat-button>SHARE</button>
+                <button mat-button routerLink="/item/{{item._id}}">DETAILS</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

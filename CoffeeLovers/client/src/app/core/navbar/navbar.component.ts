@@ -8,15 +8,15 @@ import { MainServiceService } from '../../services/main-service.service';
 })
 export class NavbarComponent {
 
- 
-  constructor(private ServiceComponent : MainServiceService ) {
+
+  logedUser: any
+  constructor(private ServiceComponent: MainServiceService) {
 
 
   }
 
 
 
-  
   isAuth() {
     return this.ServiceComponent.isLoggedOn()
   }

@@ -4,7 +4,8 @@ import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './authorizations/login-component/login-component.component';
 import { RegisterComponentComponent } from './authorizations/register-component/register-component.component';
 import { HomePageComponent } from './core/home-page/home-page.component'
-import { CatalogPageComponent } from './core/catalog-page/catalog-page.component';
+import { CatalogPageComponent } from './catalogs/catalog-page/catalog-page.component';
+import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-catalog.component';
 import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
@@ -18,12 +19,13 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponentComponent },
   { path: 'login', component: LoginComponentComponent },
   { path: 'catalog', component: CatalogPageComponent },
+  { path: 'favorite-catalog', component: FavoriteCatalogComponent },
   { path: 'item/:id', component: ItemPageComponent },
-  { path: 'add-item', component: AddItemComponent ,canActivate:[IsAuthGuard]},
-  { path: 'edit-page/:id', component: EditPageComponent,canActivate:[IsAuthGuard]},
+  { path: 'add-item', component: AddItemComponent, canActivate: [IsAuthGuard] },
+  { path: 'edit-page/:id', component: EditPageComponent, canActivate: [IsAuthGuard] },
   { path: 'edit-comment-page/:id', component: EditCommentPageComponent },
   { path: 'liked/:id', component: CommentsPageComponent },
-  { path: 'dislike/:id', component: CommentsPageComponent }
+  { path: 'dislike/:id', component: CommentsPageComponent },
 ];
 
 

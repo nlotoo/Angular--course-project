@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { environment } from '../environments/environment';
 // import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { CatalogPageComponent } from './core/catalog-page/catalog-page.component';
+import { CatalogPageComponent } from './catalogs/catalog-page/catalog-page.component';
 import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -33,6 +33,7 @@ import { CommentsPageComponent } from './app-comment/comments-page/comments-page
 import { CommentsActiveBubbleComponent } from './app-comment/comments-active-bubble/comments-active-bubble.component';
 import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
+import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-catalog.component';
 
 
 
@@ -50,6 +51,7 @@ import { IsAuthGuard } from './guards/is-auth.guard';
     CommentsPageComponent,
     CommentsActiveBubbleComponent,
     EditCommentPageComponent,
+    FavoriteCatalogComponent,
 
 
   ],
