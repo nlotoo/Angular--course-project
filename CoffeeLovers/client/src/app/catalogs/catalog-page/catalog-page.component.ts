@@ -1,4 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 
@@ -19,7 +19,7 @@ export class CatalogPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  
+
 
   }
 

@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponentComponent },
   { path: 'login', component: LoginComponentComponent },
   { path: 'catalog', component: CatalogPageComponent },
-  { path: 'favorite-catalog', component: FavoriteCatalogComponent },
+  { path: 'favorite-catalog', component: FavoriteCatalogComponent,canActivate: [IsAuthGuard] },
   { path: 'item/:id', component: ItemPageComponent },
   { path: 'add-item', component: AddItemComponent, canActivate: [IsAuthGuard] },
   { path: 'edit-page/:id', component: EditPageComponent, canActivate: [IsAuthGuard] },
