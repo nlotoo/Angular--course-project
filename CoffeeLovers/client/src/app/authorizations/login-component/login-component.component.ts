@@ -1,16 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import {Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 import { AuthService } from '../auth.service';
-
-
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-
-interface userSotreFace {
-  userMsg: string
-}
 
 
 @Component({
@@ -20,9 +12,6 @@ interface userSotreFace {
 })
 export class LoginComponentComponent implements OnInit {
 
-  userMsg$: any
-
-
 
   loginForm: any
   warningMessage: any
@@ -31,13 +20,10 @@ export class LoginComponentComponent implements OnInit {
     private fb: FormBuilder,
     private ServiceComponent: AuthService,
     private route: Router,
-    private MainService: MainServiceService,
-    private store: Store
+    private MainService: MainServiceService
   ) { }
 
   ngOnInit(): void {
-    this.userMsg$ = this.store.select('userMsg')
-
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -63,6 +49,6 @@ export class LoginComponentComponent implements OnInit {
     )
 
 
-  }
+ }
 
 }

@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // NgRx
 import { StoreModule } from '@ngrx/store';
 import { SimpleReducer } from './state/simple-reducer';
-import { UserReducer } from './state/userReducer';
 
 
 import { MaterialModule } from './app.material.module';
@@ -69,7 +68,6 @@ import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-c
     ReactiveFormsModule,
 
     HttpClientModule,
-    StoreModule.forRoot({ userMsg: UserReducer }),
     StoreModule.forRoot({ message: SimpleReducer }),
 
 
