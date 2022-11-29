@@ -1,10 +1,11 @@
 <div class="login-container">
-    {{container | async}}
     <img class="container-image" src="../../assets/img/back-ground.jpg">
 
     <mat-card-title class="heading" fxLayoutAlign='center center'>Login</mat-card-title>
     <mat-card-content fxLayoutAlign='center center'>
+
         <form class='form-container' [formGroup]="loginForm" (submit)="loginUser()">
+           
             <div class='username'>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>

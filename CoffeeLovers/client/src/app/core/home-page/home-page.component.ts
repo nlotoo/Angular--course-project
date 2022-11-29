@@ -22,12 +22,12 @@ export class HomePageComponent {
 
 
   constructor(private store: Store<AppStoreFace>) {
-    console.log(this.store)
+
     this.message$ = this.store.select('message');
 
   }
 
-    
+
 
   spanishMesage() {
     this.store.dispatch({ type: 'Spanish' })

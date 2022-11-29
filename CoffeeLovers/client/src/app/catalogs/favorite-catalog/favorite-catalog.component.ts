@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainServiceService } from 'src/app/services/main-service.service';
 
 @Component({
@@ -6,20 +6,20 @@ import { MainServiceService } from 'src/app/services/main-service.service';
   templateUrl: './favorite-catalog.component.html',
   styleUrls: ['./favorite-catalog.component.css']
 })
-export class FavoriteCatalogComponent {
+export class FavoriteCatalogComponent implements OnInit {
 
   favoriteItems: any;
 
   constructor(
     private MainService: MainServiceService
   ) {
-
-
-
-
     this.MainService.getFavorite().subscribe((fetchedFavoriteItems) => {
       console.log(fetchedFavoriteItems)
       this.favoriteItems = fetchedFavoriteItems
     })
+  }
+
+  ngOnInit(): void {
+
   }
 }
