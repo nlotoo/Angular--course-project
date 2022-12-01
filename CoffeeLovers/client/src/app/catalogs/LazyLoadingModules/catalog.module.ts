@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
+import { CatalogPageComponent } from '../catalog-page/catalog-page.component';
 import { CatalogLazyModule } from './catalogs-routing.module';
-import { MaterialModule } from '../app.material.module';
+import { MaterialModule } from '../../modules/app.material.module';
 
 
 

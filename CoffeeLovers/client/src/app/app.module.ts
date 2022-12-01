@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -10,7 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { SimpleReducer } from './state/simple-reducer';
 import { userReducer } from './state/userReducer'
 
-import { MaterialModule } from './app.material.module';
+import { MaterialModule } from './modules/app.material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavbarComponent } from './core/navbar/navbar.component';
@@ -20,18 +20,14 @@ import { HomePageComponent } from './core/home-page/home-page.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { CatalogPageComponent } from './catalogs/catalog-page/catalog-page.component';
-import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
-import { CommentsPageComponent } from './app-comment/comments-page/comments-page.component';
-import { CommentsActiveBubbleComponent } from './app-comment/comments-active-bubble/comments-active-bubble.component';
 import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
-import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-catalog.component';
-import { LazyModule } from './lazy/lazy.module';
+
+
 
 
 
@@ -44,15 +40,15 @@ import { LazyModule } from './lazy/lazy.module';
     RegisterComponentComponent,
     LoginComponentComponent,
     HomePageComponent,
-    // CatalogPageComponent,
-    ItemPageComponent,
     AddItemComponent,
     EditPageComponent,
-    CommentsPageComponent,
-    CommentsActiveBubbleComponent,
     EditCommentPageComponent,
-
-    // FavoriteCatalogComponent,
+    
+    // CommentsPageComponent, lazyloading
+    // CommentsActiveBubbleComponent, lazyloading
+    // ItemPageComponent, lazyloading
+    // CatalogPageComponent, lazyloading
+    // FavoriteCatalogComponent, Lazyloadig
 
 
   ],
@@ -63,7 +59,6 @@ import { LazyModule } from './lazy/lazy.module';
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-
     HttpClientModule,
     StoreModule.forRoot(
       {

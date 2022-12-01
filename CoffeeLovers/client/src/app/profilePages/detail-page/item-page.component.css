@@ -1,3 +1,9 @@
+.card-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .page-container {
     background-image: url(../../../assets/img/back-ground.jpg);
     background-repeat: no-repeat;

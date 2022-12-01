@@ -13,6 +13,9 @@ export class FavoriteCatalogComponent implements OnInit {
   constructor(
     private MainService: MainServiceService
   ) {
+
+
+
     this.MainService.getFavorite().subscribe((fetchedFavoriteItems) => {
       console.log(fetchedFavoriteItems)
       this.favoriteItems = fetchedFavoriteItems
