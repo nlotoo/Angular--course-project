@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { FavoriteCatalogComponent } from './favorite-catalog/favorite-catalog.component';
 import { CatalogLazyModule } from './catalogs-routing.module';
+import { MaterialModule } from '../app.material.module';
 
 
 
@@ -12,6 +12,7 @@ import { CatalogLazyModule } from './catalogs-routing.module';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     CatalogLazyModule,
   ]
 })

@@ -51,7 +51,8 @@ import { LazyModule } from './lazy/lazy.module';
     CommentsPageComponent,
     CommentsActiveBubbleComponent,
     EditCommentPageComponent,
-    FavoriteCatalogComponent,
+
+    // FavoriteCatalogComponent,
 
 
   ],

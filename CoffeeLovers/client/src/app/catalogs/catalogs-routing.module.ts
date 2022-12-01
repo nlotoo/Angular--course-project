@@ -3,8 +3,8 @@ import { CatalogPageComponent } from "./catalog-page/catalog-page.component";
 
 const routes: Routes = [
     {
-        path: 'catalog',
-        // pathMatch: 'full',
+        path: '',
+        pathMatch: 'full',
         component: CatalogPageComponent,
     }
 ]

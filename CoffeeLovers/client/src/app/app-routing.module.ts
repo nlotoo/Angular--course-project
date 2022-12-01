@@ -24,10 +24,14 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   {
     path: 'catalog',
-    loadChildren: () => import('./catalogs/catalog.module').then(m => m.CatalogModule)
-
+    loadChildren: () => import('./catalogs/catalog.module').then(m => m.CatalogModule),
+    canActivate: [IsAuthGuard],
   },
 
+  {
+    path: 'favorite-catalog',
+    loadChildren: () => import('./catalogs/favorite-catalog.module').then(m => m.FavoriteModule),
+  },
 
   // { path: 'catalog', component: CatalogPageComponent, canActivate: [IsAuthGuard] },
   { path: 'favorite-catalog', component: FavoriteCatalogComponent, canActivate: [IsAuthGuard] },
