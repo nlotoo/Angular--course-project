@@ -7,7 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // NgRx
 import { StoreModule } from '@ngrx/store';
+
+import { counterReducer } from '../app/NgRx/reducer/counter.reducer';
 import { SimpleReducer } from './state/simple-reducer';
+
 import { userReducer } from './state/userReducer'
 
 import { MaterialModule } from './modules/app.material.module';
@@ -43,7 +46,7 @@ import { IsAuthGuard } from './guards/is-auth.guard';
     AddItemComponent,
     EditPageComponent,
     EditCommentPageComponent,
-    
+
     // CommentsPageComponent, lazyloading
     // CommentsActiveBubbleComponent, lazyloading
     // ItemPageComponent, lazyloading
@@ -63,6 +66,7 @@ import { IsAuthGuard } from './guards/is-auth.guard';
     StoreModule.forRoot(
       {
         message: SimpleReducer,
+        count: counterReducer,
       },
     ),
 
