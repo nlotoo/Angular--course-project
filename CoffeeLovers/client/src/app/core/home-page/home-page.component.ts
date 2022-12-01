@@ -3,10 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
+
+
 interface AppStoreFace {
   message: string;
 
 }
+
+
 
 
 
@@ -21,11 +25,17 @@ export class HomePageComponent {
   message$: Observable<string>
 
 
+  text: string | any; //for input val
+
+
   constructor(private store: Store<AppStoreFace>) {
 
     this.message$ = this.store.select('message');
 
+
   }
+
+
 
 
 

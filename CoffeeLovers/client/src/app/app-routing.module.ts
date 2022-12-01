@@ -16,10 +16,21 @@ import { IsAuthGuard } from './guards/is-auth.guard';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
+  {
+    path: 'lazy',
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
+  },
   { path: 'register', component: RegisterComponentComponent },
   { path: 'login', component: LoginComponentComponent },
-  { path: 'catalog', component: CatalogPageComponent,canActivate: [IsAuthGuard] },
-  { path: 'favorite-catalog', component: FavoriteCatalogComponent,canActivate: [IsAuthGuard] },
+  {
+    path: 'catalog',
+    loadChildren: () => import('./catalogs/catalog.module').then(m => m.CatalogModule)
+
+  },
+
+
+  // { path: 'catalog', component: CatalogPageComponent, canActivate: [IsAuthGuard] },
+  { path: 'favorite-catalog', component: FavoriteCatalogComponent, canActivate: [IsAuthGuard] },
   { path: 'item/:id', component: ItemPageComponent },
   { path: 'add-item', component: AddItemComponent, canActivate: [IsAuthGuard] },
   { path: 'edit-page/:id', component: EditPageComponent, canActivate: [IsAuthGuard] },

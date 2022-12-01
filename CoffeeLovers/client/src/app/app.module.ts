@@ -20,13 +20,6 @@ import { HomePageComponent } from './core/home-page/home-page.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
-// import { AngularFireAuthModule } from "@angular/fire/compat/auth";
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-// import { AngularFireModule } from '@angular/fire/compat';
-// import { environment } from '../environments/environment';
-// import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { CatalogPageComponent } from './catalogs/catalog-page/catalog-page.component';
 import { ItemPageComponent } from './profilePages/detail-page/item-page.component';
 
@@ -38,6 +31,9 @@ import { CommentsActiveBubbleComponent } from './app-comment/comments-active-bub
 import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
 import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-catalog.component';
+import { LazyModule } from './lazy/lazy.module';
+
+
 
 
 
@@ -48,7 +44,7 @@ import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-c
     RegisterComponentComponent,
     LoginComponentComponent,
     HomePageComponent,
-    CatalogPageComponent,
+    // CatalogPageComponent,
     ItemPageComponent,
     AddItemComponent,
     EditPageComponent,
@@ -68,8 +64,13 @@ import { FavoriteCatalogComponent } from './catalogs/favorite-catalog/favorite-c
     ReactiveFormsModule,
 
     HttpClientModule,
-    StoreModule.forRoot({ message: SimpleReducer }),
-    StoreModule.forRoot({ userState: userReducer }),
+    StoreModule.forRoot(
+      {
+        message: SimpleReducer,
+      },
+    ),
+
+
 
 
   ],

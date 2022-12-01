@@ -5,26 +5,15 @@ import { environment } from 'src/environments/environment.prod';
 import { tap } from 'rxjs';
 import { MainServiceService } from '../services/main-service.service';
 
-
-
-
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-
-
   constructor(
     private HttpClient: HttpClient,
-    private MainService: MainServiceService,
-
-    
-  ) {
-  
-  }
+    private MainService: MainServiceService
+  ) { }
 
 
   setToken(
@@ -47,9 +36,6 @@ export class AuthService {
 
   }
   loginUser(data: registerFace) {
-
-
-
     return this.HttpClient.post<any>(`${environment.apiURL}/login`, data)
       .pipe(tap((inscriptionData) => {
         this.setToken("Session Token", `${inscriptionData['reduceUserInfo'].token}`)

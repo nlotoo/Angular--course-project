@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-
+import {Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 import { AuthService } from '../auth.service';
-
 
 
 @Component({
@@ -17,23 +15,15 @@ export class LoginComponentComponent implements OnInit {
 
   loginForm: any
   warningMessage: any
- 
 
   constructor(
     private fb: FormBuilder,
     private ServiceComponent: AuthService,
     private route: Router,
-    private MainService: MainServiceService,
-
-   
-  ) {
-
-  
-  }
+    private MainService: MainServiceService
+  ) { }
 
   ngOnInit(): void {
-
-
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -42,13 +32,7 @@ export class LoginComponentComponent implements OnInit {
   }
 
 
-
-
   loginUser() {
-
-
-
-  
 
     const user = this.loginForm.value
     this.ServiceComponent.loginUser(user).subscribe(
@@ -57,7 +41,7 @@ export class LoginComponentComponent implements OnInit {
           this.route.navigate(['/'])
         },
         error: (err: any) => {
-
+          console.log(err)
           this.warningMessage = err.error.message
           this.MainService.clearSession()
         }
@@ -65,6 +49,6 @@ export class LoginComponentComponent implements OnInit {
     )
 
 
-  }
+ }
 
 }
