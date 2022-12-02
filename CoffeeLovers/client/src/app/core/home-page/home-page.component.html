@@ -2,9 +2,17 @@
     <img class="home-page-bg-img" src="../../../../../assets/img/first-background.jpg">
     <div class="home-page-container">
         <div>
-            {{message$ | async}}
-            <button (click)="spanishMesage()">Spanish</button>
-            <button (click)="frenchMessage()">French</button>
+            <button (click)="increment()">Increment</button>
+
+            <div>Current Count: {{ count$ | async }}</div>
+
+            <button (click)="decrement()">Decrement</button>
+
+            <button (click)="reset()">Reset Counter</button>
+            <div>Current Count: {{ user$|async }}</div>
+            <button (click)="getUserData()">get Data</button>
+            
+
         </div>
         <div class="home-page-content">
             <h1 class="home-page-heading">Buy from our coffee</h1>

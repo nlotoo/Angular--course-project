@@ -1,19 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-
-
-interface AppStoreFace {
-  message: string;
-
-}
-
-
-
-
-
+import { increment, decrement, reset } from '../../NgRx/actions/counter.actions'
+import { userDataFetcher } from '../../NgRx/actions/userData.actions'
 
 @Component({
   selector: 'app-home-page',
@@ -22,29 +13,35 @@ interface AppStoreFace {
 })
 export class HomePageComponent {
 
-  message$: Observable<string>
+  count$: Observable<number>
+  user$: any
 
+  constructor(
+    private store: Store<{ count: number }>,
+    private store2: Store<{ user: string }>,
 
-  text: string | any; //for input val
+  ) {
+    this.count$ = store.select('count')
+    this.user$ = store2.select('user') // (state)=> console.log(state);
+  }
 
+  getUserData() {
 
-  constructor(private store: Store<AppStoreFace>) {
-
-    this.message$ = this.store.select('message');
-
-
+    this.store2.dispatch(userDataFetcher())
   }
 
 
-
-
-
-  spanishMesage() {
-    this.store.dispatch({ type: 'Spanish' })
+  increment() {
+    this.store.dispatch(increment());
   }
 
-  frenchMessage() {
-    this.store.dispatch(({ type: 'French' }))
+  decrement() {
+    this.store.dispatch(decrement());
   }
+
+  reset() {
+    this.store.dispatch(reset());
+  }
+
 
 }

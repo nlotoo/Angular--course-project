@@ -9,9 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 
 import { counterReducer } from '../app/NgRx/reducer/counter.reducer';
-import { SimpleReducer } from './state/simple-reducer';
 
-import { userReducer } from './state/userReducer'
 
 import { MaterialModule } from './modules/app.material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -29,6 +27,7 @@ import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
 import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
+import { userDataReducer } from './NgRx/reducer/userData.reducer';
 
 
 
@@ -65,7 +64,7 @@ import { IsAuthGuard } from './guards/is-auth.guard';
     HttpClientModule,
     StoreModule.forRoot(
       {
-        message: SimpleReducer,
+        user: userDataReducer,
         count: counterReducer,
       },
     ),

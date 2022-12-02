@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import {Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 import { AuthService } from '../auth.service';
 
@@ -37,7 +37,8 @@ export class LoginComponentComponent implements OnInit {
     const user = this.loginForm.value
     this.ServiceComponent.loginUser(user).subscribe(
       {
-        next: () => {
+        next: (data:object) => {
+          console.log(data)
           this.route.navigate(['/'])
         },
         error: (err: any) => {
@@ -49,6 +50,6 @@ export class LoginComponentComponent implements OnInit {
     )
 
 
- }
+  }
 
 }
