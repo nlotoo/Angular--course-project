@@ -4,9 +4,6 @@ import { Router } from '@angular/router';
 import { MainServiceService } from '../../services/main-service.service';
 import { AuthService } from '../auth.service';
 
-import { extarnalUserData } from 'src/app/NgRx/reducer/userData.reducer';
-import { userInfo } from 'src/app/NgRx/actions/userData.actions';
-import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-login-component',
   templateUrl: './login-component.component.html',
@@ -18,18 +15,15 @@ export class LoginComponentComponent implements OnInit {
   loginForm: any
   warningMessage: any
 
-  userInfo$: any
 
   constructor(
     private fb: FormBuilder,
     private ServiceComponent: AuthService,
     private route: Router,
     private MainService: MainServiceService,
-    private store: Store,
   ) {
 
 
-    this.userInfo$ = store.select((state) => console.log(state))
   }
 
   ngOnInit(): void {
@@ -48,7 +42,6 @@ export class LoginComponentComponent implements OnInit {
       {
         next: (data: object) => {
           console.log(data)
-          extarnalUserData(data);
           this.route.navigate(['/'])
         },
         error: (err: any) => {

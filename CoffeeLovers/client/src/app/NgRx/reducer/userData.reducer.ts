@@ -12,7 +12,7 @@ export function extarnalUserData(userData: any): void {
     console.log(userData);
 
 
-    userInfoExtarnal = userData
+    userInfoExtarnal = 'data frm ExtarnalUserData'
 
     return userInfoExtarnal
 
