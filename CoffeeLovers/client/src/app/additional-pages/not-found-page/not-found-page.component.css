@@ -1,0 +1,14 @@
+.page-container {
+    background-image: url(../../../assets/img/back-ground.jpg);
+    min-height: 670px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-msg p {
+    font-size: 40px;
+}

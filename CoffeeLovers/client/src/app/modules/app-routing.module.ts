@@ -11,6 +11,7 @@ import { EditCommentPageComponent } from '../app-comment/edit-comment-page/edit-
 import { CommentsPageComponent } from '../app-comment/comments-page/comments-page.component';
 
 import { IsAuthGuard } from '../guards/is-auth.guard';
+import { NotFoundPageComponent } from '../additional-pages/not-found-page/not-found-page.component';
 
 
 
@@ -42,6 +43,9 @@ const routes: Routes = [
   { path: 'edit-comment-page/:id', component: EditCommentPageComponent, canActivate: [IsAuthGuard] },
   { path: 'liked/:id', component: CommentsPageComponent },
   { path: 'dislike/:id', component: CommentsPageComponent },
+  {
+    path: '**', pathMatch: 'full', component: NotFoundPageComponent,
+  },
 ];
 
 

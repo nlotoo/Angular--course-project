@@ -11,12 +11,8 @@ export class NavbarComponent {
 
   logedUser: any
   constructor(private ServiceComponent: MainServiceService) {
-
-
   }
-
-
-
+  
   isAuth() {
     return this.ServiceComponent.isLoggedOn()
   }
