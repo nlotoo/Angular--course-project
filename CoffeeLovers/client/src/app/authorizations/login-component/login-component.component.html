@@ -5,7 +5,7 @@
     <mat-card-content fxLayoutAlign='center center'>
 
         <form class='form-container' [formGroup]="loginForm" (submit)="loginUser()">
-           
+
             <div class='username'>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
@@ -17,7 +17,7 @@
             <div class='password'>
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput placeholder="type your password" formControlName="password">
+                    <input matInput placeholder="type your password" type="password" formControlName="password">
                     <mat-icon matSuffix>password</mat-icon>
                     <!-- <mat-hint>Hint</mat-hint> -->
                 </mat-form-field>

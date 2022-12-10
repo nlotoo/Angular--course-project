@@ -29,6 +29,7 @@ import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-c
 import { IsAuthGuard } from './guards/is-auth.guard';
 import { userDataReducer } from './NgRx/reducer/userData.reducer';
 import { NotFoundPageComponent } from './additional-pages/not-found-page/not-found-page.component';
+import { AboutComponent } from './additional-pages/about-page/about/about.component';
 
 
 
@@ -47,6 +48,7 @@ import { NotFoundPageComponent } from './additional-pages/not-found-page/not-fou
     EditPageComponent,
     EditCommentPageComponent,
     NotFoundPageComponent,
+    AboutComponent,
 
     // CommentsPageComponent, lazyloading
     // CommentsActiveBubbleComponent, lazyloading

@@ -12,6 +12,7 @@ import { CommentsPageComponent } from '../app-comment/comments-page/comments-pag
 
 import { IsAuthGuard } from '../guards/is-auth.guard';
 import { NotFoundPageComponent } from '../additional-pages/not-found-page/not-found-page.component';
+import { AboutComponent } from '../additional-pages/about-page/about/about.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'register', component: RegisterComponentComponent },
   { path: 'login', component: LoginComponentComponent },
+  {  path: 'about' , component: AboutComponent},
 
   {
     path: 'catalog',

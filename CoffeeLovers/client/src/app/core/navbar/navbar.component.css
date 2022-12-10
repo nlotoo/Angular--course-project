@@ -48,6 +48,8 @@ nav {
 
 .item-list-top .list-item {
     list-style: none;
+    color:white;
+    cursor: pointer;
 }
 
 .header-container nav .item-list-top {

@@ -17,7 +17,7 @@
             <div class='password'>
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input class="register-input"matInput placeholder="type your password" formControlName='password'>
+                    <input class="register-input"matInput placeholder="type your password" type="password" formControlName='password' >
                     <mat-icon matSuffix>password</mat-icon>
 
                     <mat-hint *ngIf="this.registerForm.controls.password?.errors?.required && this.registerForm.controls.password?.touched">Please type your password</mat-hint>
@@ -29,7 +29,7 @@
             <div class='rePassword'>
                 <mat-form-field appearance="outline">
                     <mat-label>Reply password</mat-label>
-                    <input class="register-input"matInput placeholder="type again your password" formControlName='rePass'>
+                    <input class="register-input"matInput placeholder="type again your password" type="password" formControlName='rePass'>
                     <mat-icon matSuffix>password</mat-icon>
 
                     <mat-hint *ngIf="this.registerForm.controls.rePass?.errors?.required && this.registerForm.controls.rePass?.touched">Please type your password</mat-hint>
