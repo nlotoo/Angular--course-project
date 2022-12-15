@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // NgRx
-import { StoreModule } from '@ngrx/store';
 
-import { counterReducer } from '../app/NgRx/reducer/counter.reducer';
+
 
 
 import { MaterialModule } from './modules/app.material.module';
@@ -27,7 +26,6 @@ import { AddItemComponent } from './profilePages/add-item/add-item.component';
 import { EditPageComponent } from './profilePages/edit-page/edit-page.component';
 import { EditCommentPageComponent } from './app-comment/edit-comment-page/edit-comment-page.component';
 import { IsAuthGuard } from './guards/is-auth.guard';
-import { userDataReducer } from './NgRx/reducer/userData.reducer';
 import { NotFoundPageComponent } from './additional-pages/not-found-page/not-found-page.component';
 import { AboutComponent } from './additional-pages/about-page/about/about.component';
 
