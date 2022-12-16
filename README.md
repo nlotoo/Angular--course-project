@@ -52,6 +52,7 @@ You will  see any lint errors in the cmd.
 <a href="https://ibb.co/tqDP2HR"><img src="https://i.ibb.co/F5zqYhp/details-page.jpg" alt="details-page" border="0"></a>
 <a href="https://ibb.co/vx0hYJw"><img src="https://i.ibb.co/1fFM69v/Edit-page.jpg" alt="Edit-page" border="0"></a>
 <a href="https://ibb.co/cLrrVbN"><img src="https://i.ibb.co/9trrSwq/Cooment-page.jpg" alt="Cooment-page" border="0"></a>
+<a href="https://ibb.co/Lgzt311"><img src="https://i.ibb.co/1XfqkTT/edit-comments.jpg" alt="edit-comments" border="0"></a>
 
 
 
