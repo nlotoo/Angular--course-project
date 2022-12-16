@@ -5,7 +5,7 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// NgRx
+
 
 
 
@@ -48,11 +48,6 @@ import { AboutComponent } from './additional-pages/about-page/about/about.compon
     NotFoundPageComponent,
     AboutComponent,
 
-    // CommentsPageComponent, lazyloading
-    // CommentsActiveBubbleComponent, lazyloading
-    // ItemPageComponent, lazyloading
-    // CatalogPageComponent, lazyloading
-    // FavoriteCatalogComponent, Lazyloadig
 
 
   ],
@@ -64,12 +59,7 @@ import { AboutComponent } from './additional-pages/about-page/about/about.compon
     FlexLayoutModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot(
-      {
-        user: userDataReducer,
-        count: counterReducer,
-      },
-    ),
+  
 
 
 

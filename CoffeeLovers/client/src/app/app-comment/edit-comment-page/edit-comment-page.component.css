@@ -1,0 +1,28 @@
+.page-container {
+    background-image: url(../../../assets/img/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.heading {
+    margin-bottom: 50px;
+}
+
+.card-container {
+    color: whitesmoke;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.40);
+    border: 2px solid black;
+}
+
+.textarea {
+    resize: none;
+}

@@ -1,19 +1,4 @@
-<!-- <mat-toolbar>
 
-    <span class="myApp"> <a routerLink="/home">My app</a></span>
-    <div class="menuBar">
-        <ul fxLayout="row">
-
-            <li><a *ngIf="!isAuth()" routerLink="/login">Login</a></li>
-            <li><a *ngIf="!isAuth()" routerLink="/register">Register</a></li>
-            <li><a routerLink="/catalog">Catalog</a></li>
-            <li><a *ngIf="isAuth()" routerLink="/add-item">Add new Item</a> </li>
-            <li><a *ngIf="isAuth()" (click)="logout()" routerLink="/home">Logout</a></li>
-
-
-        </ul>
-    </div>
-</mat-toolbar> -->
 <header>
     <div class="header-container">
         <div class="logo-container">
@@ -23,22 +8,13 @@
 
         <nav>
             <ul class="item-list-top">
-                <li class="list-item"><a routerLink="/home"></a><mat-icon>home</mat-icon></li>
+                <li class="list-item"><a routerLink="/home">Home</a></li>
                 <li class="list-item"><a href="/about">About</a></li>
-                <li class="list-item"><a *ngIf="isAuth()" routerLink="/add-item"></a> <mat-icon>note_add</mat-icon></li>
-                <li class="list-item"><a routerLink="/catalog">
-                    <mat-icon>chrome_reader_mode</mat-icon>
-                    </a>
-                </li>
-                <li class="list-item"><a href="/favorite-catalog">
-                    <mat-icon>favorite</mat-icon>
-                    </a></li>
-                <li class="list-item"><a *ngIf="!isAuth()" routerLink="/login">
-                        <mat-icon class="nav-icon">account_circle</mat-icon>
-                    </a></li>
-                <li class="list-item lastOne"><a *ngIf="isAuth()" (click)="logout()" routerLink="/home"></a><mat-icon>arrow_right_alt</mat-icon></li>
-
-
+                <li class="list-item"><a routerLink="/catalog">Catalog</a></li>
+                <li class="list-item"><a href="/favorite-catalog">Favorite catalog</a></li>
+                <li class="list-item"><a *ngIf="isAuth()" routerLink="/add-item">Add new Coffee</a></li>
+                <li class="list-item"><a *ngIf="!isAuth()" routerLink="/login">Login</a></li>
+                <li class="list-item lastOne"><a *ngIf="isAuth()" (click)="logout()"routerLink="/home">Logout</a></li>
             </ul>
         </nav>
     </div>
