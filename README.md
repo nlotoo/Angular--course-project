@@ -41,4 +41,19 @@ You will  see any lint errors in the cmd.
 * Unregistered and authorized users have access to the homepage.
 * Only unregistered users have access to the login and register pages.
 
+## Screenshots:
+
+<a href="https://ibb.co/Hx5hb67"><img src="https://i.ibb.co/KLTKfd6/home-page01.jpg" alt="home-page01" border="0"></a>
+<a href="https://ibb.co/sRWwCkC"><img src="https://i.ibb.co/8sY5bTb/login-page.jpg" alt="login-page" border="0"></a>
+<a href="https://ibb.co/KyjMTgK"><img src="https://i.ibb.co/pXvtYTh/register-page.jpg" alt="register-page" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>free image hosting</a><br />
+<a href="https://ibb.co/VmhpQ1d"><img src="https://i.ibb.co/WtdpPhQ/catalog-page.jpg" alt="catalog-page" border="0"></a>
+<a href="https://ibb.co/X4y6PDg"><img src="https://i.ibb.co/268RrSQ/favorite-page.jpg" alt="favorite-page" border="0"></a>
+<a href="https://ibb.co/Xb2dJ4r"><img src="https://i.ibb.co/f21K0Sz/Create-new.jpg" alt="Create-new" border="0"></a>
+<a href="https://ibb.co/tqDP2HR"><img src="https://i.ibb.co/F5zqYhp/details-page.jpg" alt="details-page" border="0"></a>
+<a href="https://ibb.co/vx0hYJw"><img src="https://i.ibb.co/1fFM69v/Edit-page.jpg" alt="Edit-page" border="0"></a>
+<a href="https://ibb.co/cLrrVbN"><img src="https://i.ibb.co/9trrSwq/Cooment-page.jpg" alt="Cooment-page" border="0"></a>
+
+
+
+
 
