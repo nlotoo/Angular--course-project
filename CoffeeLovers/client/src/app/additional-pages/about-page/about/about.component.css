@@ -27,9 +27,21 @@
     width: 540px;
     height: 400px;
     position: absolute;
-    top: 18rem;
+    top: 16rem;
     right: 8rem;
     color: white;
     border-radius: 5px;
     box-shadow: 2px 1px 5px rgb(0 0 0);
+}
+
+.about-img {
+    /* border: 2px solid black; */
+    box-shadow: 2px 1px 5px rgb(0 0 0);
+    border-radius: 5px;
+
+    width: 480px;
+    height: 400px;
+    position: absolute;
+    top:39%;
+    left:12%;
 }
