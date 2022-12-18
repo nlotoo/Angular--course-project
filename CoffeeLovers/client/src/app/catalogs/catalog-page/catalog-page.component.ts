@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 import { MainServiceService } from '../../services/main-service.service';
 
 
@@ -9,12 +9,14 @@ import { MainServiceService } from '../../services/main-service.service';
   styleUrls: ['./catalog-page.component.css']
 })
 export class CatalogPageComponent implements OnInit {
-  items: any
 
+  items: any = {};
 
-  constructor(private ServiceComponent: MainServiceService, private route: Router) {
-    this.ServiceComponent.getAllItems().subscribe((ee) => {
-      this.items = ee
+  constructor(
+    private ServiceComponent: MainServiceService,
+  ) {
+    this.ServiceComponent.getAllItems().subscribe((arrayOfItems) => {
+      this.items = arrayOfItems
     })
   }
 

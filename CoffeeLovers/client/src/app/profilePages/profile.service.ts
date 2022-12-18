@@ -36,18 +36,18 @@ export class ProfileService {
 
 
   }
-  getOneItem(id: string) {
+  getOneItem(id: string | null) {
     return this.HttpClient.get(`${this.apiURL}/item/${id}`)
 
   }
-  deleteOne(id: string) {
+  deleteOne(id: string | null) {
     return this.HttpClient.get(`${this.apiURL}/delete/${id}`, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) }).subscribe((data) => {
       this.route.navigate(['/catalog'])
       return data
     })
   }
 
-  updateOneItem(itemId: any) {
+  updateOneItem(itemId: string | null) {
 
     return this.HttpClient.post<any>(`${this.apiURL}/update-item`, itemId, { headers: new HttpHeaders({ 'token': `${this.Mainservice.isLoggedOn()}` }) }).subscribe((data) => {
       try {
@@ -67,7 +67,7 @@ export class ProfileService {
   }
 
   disLikeButtonPress(data: object | any) {
-    
+
     return this.HttpClient.post<any>(`${environment.apiURL}/disliked-item/${data.itemID}`, data)
 
   }

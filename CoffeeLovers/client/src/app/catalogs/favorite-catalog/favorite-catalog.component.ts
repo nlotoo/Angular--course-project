@@ -8,7 +8,7 @@ import { MainServiceService } from 'src/app/services/main-service.service';
 })
 export class FavoriteCatalogComponent implements OnInit {
 
-  favoriteItems: any;
+  favoriteItems: any = {};
 
   constructor(
     private MainService: MainServiceService

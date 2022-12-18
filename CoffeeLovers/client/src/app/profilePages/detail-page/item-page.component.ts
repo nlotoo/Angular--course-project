@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MainServiceService } from 'src/app/services/main-service.service';
-import { environment } from 'src/environments/environment.prod';
+import { Observable } from 'rxjs';
+import { AddItemFace } from 'src/app/interfaces/addItemFace';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -21,6 +21,7 @@ export class ItemPageComponent implements OnInit {
 
 
 
+
   constructor(
     private route: ActivatedRoute,
     private ServiceComponent: ProfileService,
@@ -31,6 +32,7 @@ export class ItemPageComponent implements OnInit {
   }
   locastorageID = localStorage.getItem('User ID')
   ngOnInit(): void {
+
     this.route.params.subscribe((data) => {
       this.ServiceComponent.getOneItem(data['id']).subscribe((itemById) => {
         this.item = itemById

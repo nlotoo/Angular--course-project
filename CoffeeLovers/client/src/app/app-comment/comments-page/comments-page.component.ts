@@ -11,13 +11,12 @@ export class CommentsPageComponent implements OnInit {
 
   constructor(
     private ServiceComponent: CommentService,
-     private route: Router
-     ) { }
+
+  ) { }
 
   coments: any
 
-  authChek: any
-  flag: any = localStorage.getItem('User ID')
+  flag: string | null = localStorage.getItem('User ID')
 
   ngOnInit(): void {
     this.laodComments()
@@ -30,6 +29,7 @@ export class CommentsPageComponent implements OnInit {
       .subscribe({
         next: (data) => {
           data.map((arrayRow: any) => {
+
             let userID = localStorage.getItem('User ID')
 
             return arrayRow.likes.likes.find((likesRow: any) => {

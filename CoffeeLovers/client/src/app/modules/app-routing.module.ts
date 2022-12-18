@@ -20,7 +20,7 @@ import { AboutComponent } from '../additional-pages/about-page/about/about.compo
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'register', component: RegisterComponentComponent },
+  { path: 'register', component: RegisterComponentComponent, },
   { path: 'login', component: LoginComponentComponent },
   {  path: 'about' , component: AboutComponent},
 

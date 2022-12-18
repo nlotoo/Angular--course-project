@@ -45,7 +45,7 @@ You will  see any lint errors in the cmd.
 
 <a href="https://ibb.co/Hx5hb67"><img src="https://i.ibb.co/KLTKfd6/home-page01.jpg" alt="home-page01" border="0"></a>
 <a href="https://ibb.co/sRWwCkC"><img src="https://i.ibb.co/8sY5bTb/login-page.jpg" alt="login-page" border="0"></a>
-<a href="https://ibb.co/KyjMTgK"><img src="https://i.ibb.co/pXvtYTh/register-page.jpg" alt="register-page" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>free image hosting</a><br />
+<a href="https://ibb.co/KyjMTgK"><img src="https://i.ibb.co/pXvtYTh/register-page.jpg" alt="register-page" border="0"></a>
 <a href="https://ibb.co/VmhpQ1d"><img src="https://i.ibb.co/WtdpPhQ/catalog-page.jpg" alt="catalog-page" border="0"></a>
 <a href="https://ibb.co/X4y6PDg"><img src="https://i.ibb.co/268RrSQ/favorite-page.jpg" alt="favorite-page" border="0"></a>
 <a href="https://ibb.co/Xb2dJ4r"><img src="https://i.ibb.co/f21K0Sz/Create-new.jpg" alt="Create-new" border="0"></a>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { CommentService } from '../comment.service';
 
 
@@ -11,33 +10,25 @@ import { CommentService } from '../comment.service';
 export class CommentsActiveBubbleComponent implements OnInit {
 
   constructor(
-    private ServiceComponent: CommentService, 
-    private route: Router
-    ) { }
+    private ServiceComponent: CommentService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  uername: any = localStorage.getItem('email')
+  uername: string | null = localStorage.getItem('email');
 
-
-  postComment(text: any) {
-    let userId = localStorage.getItem('User ID')
-    let email = localStorage.getItem('email')
-
+  postComment(text: string | null) {
+    let userId = localStorage.getItem('User ID');
+    let email = localStorage.getItem('email');
     let preObj = {
       itemId: window.location.pathname.slice(6),
       content: text,
       userId: userId,
       email: email,
-    }
-    this.ServiceComponent.createComment(preObj)
-    window.location.reload()
+    };
+
+    this.ServiceComponent.createComment(preObj);
+    window.location.reload();
   }
-
-
-
-
-
-
 }
