@@ -49,8 +49,5 @@ export class AddItemComponent implements OnInit {
     })
   }
 
-  form(): void {
-
-  }
 
 }
