@@ -43,16 +43,16 @@ You will  see any lint errors in the cmd.
 
 ## Screenshots:
 
-<a href="https://ibb.co/Hx5hb67"><img src="https://i.ibb.co/KLTKfd6/home-page01.jpg" alt="home-page01" border="0"></a>
-<a href="https://ibb.co/sRWwCkC"><img src="https://i.ibb.co/8sY5bTb/login-page.jpg" alt="login-page" border="0"></a>
-<a href="https://ibb.co/KyjMTgK"><img src="https://i.ibb.co/pXvtYTh/register-page.jpg" alt="register-page" border="0"></a>
-<a href="https://ibb.co/VmhpQ1d"><img src="https://i.ibb.co/WtdpPhQ/catalog-page.jpg" alt="catalog-page" border="0"></a>
-<a href="https://ibb.co/X4y6PDg"><img src="https://i.ibb.co/268RrSQ/favorite-page.jpg" alt="favorite-page" border="0"></a>
-<a href="https://ibb.co/Xb2dJ4r"><img src="https://i.ibb.co/f21K0Sz/Create-new.jpg" alt="Create-new" border="0"></a>
-<a href="https://ibb.co/tqDP2HR"><img src="https://i.ibb.co/F5zqYhp/details-page.jpg" alt="details-page" border="0"></a>
-<a href="https://ibb.co/vx0hYJw"><img src="https://i.ibb.co/1fFM69v/Edit-page.jpg" alt="Edit-page" border="0"></a>
-<a href="https://ibb.co/cLrrVbN"><img src="https://i.ibb.co/9trrSwq/Cooment-page.jpg" alt="Cooment-page" border="0"></a>
-<a href="https://ibb.co/Lgzt311"><img src="https://i.ibb.co/1XfqkTT/edit-comments.jpg" alt="edit-comments" border="0"></a>
+<img src="https://i.paste.pics/KW7W6.png" width="700" height="343" alt="home-screen">
+<img src="https://i.paste.pics/KW7X8.png" width="700" height="322" alt="login">
+<img src="https://i.paste.pics/KW7WY.png" width="700" height="322" alt="register">
+<img src="https://i.paste.pics/KW7XB.png" width="700" height="336" alt="catalogt">
+<img src="https://i.paste.pics/fd2b328650cf293e1d95649cbf617d12.png" width="700" height="333" alt="your-catalog">
+<img src="https://i.paste.pics/88645aa8397c62f7406857b0248997c8.png" width="700" height="343" alt="details">
+<img src="https://i.paste.pics/1ceffe0e93dcee5dd3cf860466af94b6.png" width="700" height="322" alt="create">
+<img src="https://i.paste.pics/6cb10d2ab03c9f15c5240317571db2c6.png" width="700" height="324" alt="add-comment">
+<img src="https://i.paste.pics/0d4a56469a6b8486eb0ae105034af757.png" width="700" height="333" alt="edit-comment">
+
 
 
 
